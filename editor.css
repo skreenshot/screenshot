@@ -1,0 +1,30 @@
+html,
+body {
+  height: 100%;
+}
+
+.container-xxl {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+ul.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+li.nav-item {
+  margin-right: 10px;
+}
+
+main {
+  flex: 1;
+}
+
+#editor-container {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
