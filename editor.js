@@ -8,7 +8,7 @@ const config = {
   annotationsCommon: {
     fill: '#ff0000',
   },
-  Text: { text: 'Filerobot...' },
+  Text: { text: 'Text here...' },
   Rotate: { angle: 90, componentType: 'slider' },
   translations: {
     profile: 'Profile',
@@ -59,10 +59,17 @@ const config = {
       },
     ],
   },
-  tabsIds: [TABS.ADJUST, TABS.ANNOTATE, TABS.WATERMARK], // or ['Adjust', 'Annotate', 'Watermark']
+  tabsIds: [ TABS.ANNOTATE, TABS.ADJUST, TABS.RESIZE, TABS.FILTERS, TABS.FINETUNE], // removed TABS.WATERMARK,
   defaultTabId: TABS.ANNOTATE, // or 'Annotate'
   defaultToolId: TOOLS.TEXT, // or 'Text'
 };
+
+// Get the image URL
+// It could be hash # ID or ?url parameter.
+const url = new URL(window.location.href);
+const imgURL = url.searchParams.get('url');
+config.source = imgURL;
+console.log("config", config, "url", imgURL)
 
 // Assuming we have a div with id="editor_container"
 const filerobotImageEditor = new window.FilerobotImageEditor(
