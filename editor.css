@@ -25,6 +25,13 @@ main {
 #editor-container {
   height: 100%;
   width: 100%;
+}
+
+#editor-container > img.preview{
+  max-width: 100%;
+}
+
+#editor-container .FIE_root {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
