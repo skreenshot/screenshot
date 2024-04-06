@@ -20,8 +20,8 @@
       /* exported handleSignoutClick */
 
       // TODO(developer): Set to client ID and API key from the Developer Console
-      const CLIENT_ID = '134616159528-g7pbsbsruomkhgvrula9sh41bsv5sm64.apps.googleusercontent.com';
-      const API_KEY = 'AIzaSyDUdUVDPuik1-DBh0wKrlH6SzTYjHFFhno';
+      const CLIENT_ID = '134616159528-k2vji0jhu1ddmviiq2rahrr82m88vftt.apps.googleusercontent.com';
+      const API_KEY = 'AIzaSyDeARTZlsp-kGAlEaUf1KFZ3-9VSkMEJ80';
 
       // Discovery doc URL for APIs used by the quickstart
       const DISCOVERY_DOC = 'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest';
@@ -64,7 +64,7 @@
         tokenClient = google.accounts.oauth2.initTokenClient({
           client_id: CLIENT_ID,
           scope: SCOPES,
-          callback: '', // defined later
+          callback: 'https://justiceo.com/screenshot/auth.html', // defined later
         });
         gisInited = true;
         maybeEnableButtons();
